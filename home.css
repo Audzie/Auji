@@ -6,10 +6,8 @@
   }
 
   body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #FDF6F0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffe7d3;
   }
 
   header {
@@ -17,8 +15,41 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 200px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
+
+  .break {
+    margin-top: 200px;
+    width: 100%;
+    height: 13px;
+    background-color: rgb(255, 247, 219);
+  }
+
+  .break2 {
+    background-color: rgb(255, 247, 219);
+    margin-top: 0px;
+    width: 100%;
+    height: 13px;
+  }
+
+  .eye-catching {
+  margin-top: 200px;
+  width: 100%;
+  max-width: 80%;
+  height: 450px;
+  margin-left: 10%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.eye-catching img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
   .logo {
     display: flex;
@@ -121,8 +152,9 @@ transform: translate3d(0, 0, -1em);
 
   .carousel {
     width: 60%;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin-left: 20%;
+    margin-top: 130px;
+    margin-bottom: 130px;
     position: relative;
     border-radius: 20px;
     padding: 70px 0;
@@ -794,4 +826,44 @@ iframe {
 /* KOMEN */
 
 
+@media (max-width: 768px) {
+  header {
+    padding: 20px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
 
+  .eye-catching {
+    width: 90%;
+    margin: 40px auto;
+    height: auto;
+  }
+
+  .carousel {
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px 0;
+  }
+
+  .greeting {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .review-section h2 {
+    font-size: 24px;
+  }
+
+  .judul-pembungkus {
+    width: 80%;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
