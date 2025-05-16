@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="home.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -24,13 +24,28 @@
         <button class="button-10" onclick="confirmLogout()" ><span class="text">Logout</span></button>
       </div>
     </header>
-<div class="break2"></div>
 
-<div class="eye-catching">
-  <img src="gambar/eye.jpeg" alt="Eye Catching Banner">
-</div>
+    <hr style="margin-right: 8%; margin-left: 8%; border: 1px solid rgb(196, 136, 87);">
+    
+  <section class="hero">
+    <div class="content1">
+      <h1>Bukan Sekadar Makan,<br><span>Ini Perjalanan Rasa.</span></h1>
+      <p>
+        Setiap gigitan membawa kita kembali — ke meja makan masa kecil, ke momen tawa, ke hangatnya keluarga.
+        Makanan bukan hanya soal rasa, tapi cerita yang menyertainya. 
+        Inilah kenangan yang bisa kamu cicipi lagi.
+      </p>
+      <div class="buttons">
+        <a href=""></a>
+        <a href="about.html">About Us</a>
+      </div>
+    </div>
+    <div class="image">
+      <img src="gambar/s.jpg"/>
+    </div>
+  </section>
 
-<div class="break"></div>
+
 
     <!-- Carousel -->
     <div class="carousel">
@@ -443,6 +458,28 @@ setInterval(() => {
         }
       });
     }
+
+    // zoom
+
+        const img = document.querySelector('.logo img');
+
+    function startZoomSequence() {
+      let count = 0;
+      const zoomInterval = setInterval(() => {
+        img.classList.remove('animate-zoom'); // Reset animasi
+        void img.offsetWidth; // Trigger reflow biar animasi bisa diulang
+        img.classList.add('animate-zoom');
+
+        count++;
+        if (count === 3) { // Sudah 3x zoom
+          clearInterval(zoomInterval);
+          setTimeout(startZoomSequence, 4000); // jeda 4 detik lalu ulangi
+          count = 0;
+        }
+      }, 1000); // jeda antar animasi (0.6s animasi + 0.1s buffer)
+    }
+
+    startZoomSequence(); // mulai animasi pertama
 </script>
 
 
